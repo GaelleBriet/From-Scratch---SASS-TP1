@@ -1,0 +1,30 @@
+header {
+  .header-title {
+    color: $color1;
+    width: 70%;
+    text-align: center;
+    margin: 0 auto;
+    padding: 270px 0 100px 0;
+  }
+  p {
+    font-family: $font2;
+    font-style: italic;
+    font-size: 0.9rem;
+    padding-bottom: 30px;
+  }
+  .fa-arrow-down {
+    font-size: 1rem;
+    border: solid 2px $color1;
+    border-radius: 25px;
+    height: 50px;
+    width: 50px;
+    padding-top: 15px;
+    cursor: pointer;
+
+    &:hover {
+      background: $color1;
+      color: $color6;
+      transition: 0.3s;
+    }
+  }
+}

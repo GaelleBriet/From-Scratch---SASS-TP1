@@ -1,0 +1,65 @@
+nav {
+  display: flex;
+  justify-content: space-between;
+  height: 60px;
+  background: $color5;
+  text-transform: uppercase;
+  font-family: $font1;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  width: 80%;
+  margin: 0 auto;
+
+  ul {
+    @include center;
+    cursor: pointer;
+  }
+
+  li {
+    list-style-type: none;
+    height: 60px;
+    @include center;
+    padding: 10px;
+    color: $color1;
+
+    &:hover {
+      background: $color3;
+      transition: 0.3s;
+    }
+    &:hover a {
+      color: $color2;
+      transition: 0.3s;
+    }
+  }
+
+  .icon-social {
+    display: flex;
+    @include center;
+    justify-content: flex-end;
+    padding-left: 10px;
+
+    &:hover {
+      background: $color3;
+      transition: 0.5s;
+
+      i {
+        color: $color4;
+        cursor: pointer;
+      }
+    }
+
+    i {
+      padding-right: 40px;
+      font-size: 1.2rem;
+      color: $color1;
+    }
+
+    @media screen and (max-width: 1000px) {
+      display: none;
+    }
+  }
+
+  @media screen and (max-width: 1000px) {
+    justify-content: space-around;
+  }
+}

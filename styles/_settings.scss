@@ -1,0 +1,119 @@
+// réglages généraux
+
+@font-face {
+  font-family: "font1";
+  src: url("../fonts/Inter-ExtraBold.ttf");
+}
+@font-face {
+  font-family: "font2";
+  src: url("../fonts/Merriweather-Light.ttf");
+}
+
+$font1: font1, sans-serif;
+$font2: font2, serif;
+$color1: rgb(250, 250, 250);
+$color2: rgb(10, 10, 10);
+$color3: rgb(220, 220, 220);
+$color4: rgb(100, 100, 100);
+$color5: rgba(250, 250, 250, 0.3);
+$color6: rgb(150, 150, 150);
+
+@mixin center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.background {
+  background: url(../img/bg.jpg) center/cover no-repeat fixed;
+  max-width: 70vw;
+  margin: 0 auto;
+}
+
+body {
+  background-color: rgb(20, 20, 20);
+  // margin: 0 auto;
+}
+
+h1 {
+  font-family: $font1;
+  text-transform: uppercase;
+  font-size: 4rem;
+  padding-bottom: 30px;
+  letter-spacing: 5px;
+
+  @media screen and (max-width: 1000px) {
+    font-size: 2rem;
+  }
+}
+
+h2 {
+  font-family: $font1;
+  font-size: 3rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+
+  @media screen and (max-width: 1000px) {
+    font-size: 2rem;
+  }
+}
+
+h3 {
+  text-transform: uppercase;
+  font-family: $font1;
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+}
+
+h4 {
+  text-transform: uppercase;
+  font-family: $font1;
+  font-size: 0.8rem;
+  color: $color4;
+  letter-spacing: 0.8px;
+}
+
+p {
+  font-family: $font2;
+}
+
+label {
+  text-transform: uppercase;
+  font-family: $font1;
+  font-size: 0.8rem;
+  color: $color4;
+}
+
+a {
+  text-decoration: none;
+  color: $color1;
+  text-align: center;
+
+  &:visited {
+    text-decoration: none;
+  }
+}
+
+button {
+  text-transform: uppercase;
+  font-family: $font1;
+  padding: 15px 30px;
+  border: 2px solid $color2;
+  background: $color1;
+  font-size: 0.8rem;
+  letter-spacing: 1.5px;
+
+  &:hover {
+    background: $color5;
+    color: $color4;
+    border: 2px solid $color4;
+    transition: 0.3s;
+    cursor: pointer;
+  }
+}
